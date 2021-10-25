@@ -37,6 +37,12 @@ class MainActivity : AppCompatActivity() {
         oneTapClient = Identity.getSignInClient(this)
 
         findViewById<Button>(R.id.signIn_btn).setOnClickListener { signIn() }
+
+        findViewById<Button>(R.id.signOut_btn).setOnClickListener{ signOut() }
+    }
+
+    private fun signOut() {
+        oneTapClient.signOut()
     }
 
     private fun signIn() {
